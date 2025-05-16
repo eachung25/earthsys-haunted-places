@@ -23,10 +23,8 @@
         var map = new maplibregl.Map({
             container: 'map',
             style: 'https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json', // OpenStreetMap style. This can be replaced with any MapLibre style URL, see the exercise for more  Switched to Carto Dark Matter, no labels
-            // center: [-122.411, 37.785], // [longitude, latitude]
-            center: [-120.018, 36.929],
-            zoom: 5
-            // zoom: 8
+            center: [-122.411, 37.785], // [longitude, latitude]
+            zoom: 8
         });
 
         // When the page is ready, get the CSV data
@@ -50,7 +48,7 @@
                             type: 'circle',
                             source: { type: 'geojson', data: geojson },
                             paint: {
-                                'circle-radius': 4,
+                                'circle-radius': 6,
                                 'circle-color': 'red'
                             }
                         });
